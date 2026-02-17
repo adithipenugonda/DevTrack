@@ -1,0 +1,55 @@
+### register user
+POST http://localhost:4000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Adithi",
+  "email": "adithii@gmail.com",
+  "password": "123456"
+}
+
+### login
+POST http://localhost:4000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "adithii@gmail.com",
+  "password": "123456"
+}
+
+
+### add project
+POST http://localhost:4000/api/projects
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OTMzYmM4OGE3NjViNmQyNTM2NjE4NiIsImlhdCI6MTc3MTI1Njc4MywiZXhwIjoxNzcxMzQzMTgzfQ.ApssJZ6dXz8Q4F6-W2J6K32O8g4mqsAEjrP__ti4wJI
+
+{
+  "title": "DevTrack Backend",
+  "description": "Built backend with authentication and project tracking",
+  "techStack": ["Node", "Express", "MongoDB"],
+  "status": "In Progress",
+  "githubLink": "https://github.com/devtrack"
+}
+
+### get all projects
+GET http://localhost:4000/api/projects
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OTMzYmM4OGE3NjViNmQyNTM2NjE4NiIsImlhdCI6MTc3MTI1Njc4MywiZXhwIjoxNzcxMzQzMTgzfQ.ApssJZ6dXz8Q4F6-W2J6K32O8g4mqsAEjrP__ti4wJI
+
+
+### update project
+PUT http://localhost:4000/api/projects/69933bde8a765b6d25366189
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OTMzYmM4OGE3NjViNmQyNTM2NjE4NiIsImlhdCI6MTc3MTI1Njc4MywiZXhwIjoxNzcxMzQzMTgzfQ.ApssJZ6dXz8Q4F6-W2J6K32O8g4mqsAEjrP__ti4wJI
+
+{
+  "status": "Completed"
+}
+
+### delete project
+DELETE http://localhost:4000/api/projects/69932fa1017479288199df50
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OTMyZDZhMDE3NDc5Mjg4MTk5ZGY0ZCIsImlhdCI6MTc3MTI1MzI4MCwiZXhwIjoxNzcxMzM5NjgwfQ.pu_xGwp6ZEW8Vfa9VCx-RXDcq-zydVnspOCIklvIDTs
+
+### get project stats
+GET http://localhost:4000/api/projects/stats
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OTMzYmM4OGE3NjViNmQyNTM2NjE4NiIsImlhdCI6MTc3MTI1Njc4MywiZXhwIjoxNzcxMzQzMTgzfQ.ApssJZ6dXz8Q4F6-W2J6K32O8g4mqsAEjrP__ti4wJI
+
